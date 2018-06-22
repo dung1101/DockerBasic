@@ -15,3 +15,25 @@ curl -sSL https://get.docker.com/ | sudo sh
 sudo usermod -aG docker `user1`
 ```
 ## 2.Sử dụng
+### 2.1.Thực hành với image
+|Câu lệnh|Mô tả|
+|--------|-----|
+|docker search [name]| tìm kiếm image|
+|docker pull [name]| pull image về máy local|
+|docker images| #list các image có trong local|
+|docker image inspect [name]| thông tin chi tiết image|
+|docker history [name]|  lịch sử image |
+|docker rmi [name]| xóa image|
+|docker rmi -f $(docker images -qa)|xóa tất cả image|
+|docker tag [old] [new]|đổi tên tag của iamge|
+### 2.2.Thực hành với container
+|Câu lệnh|Mô tả|
+|--------|-----|
+|docker ps|list các container đang chạy|
+|docker ps -a|list tất cả các container|
+|docker rm [name / ID]| xóa container|
+|docker rm -f $(docker ps -qa)|xóa tất cả các container|
+|docker run [name image]| chạy container từ image|
+|docker run -d [name image]| container chạy nền|
+|docker run -it [name image]|chạy và login vào container|
+|docker run -p [host post]:[container host]|gán port cho container với host|
