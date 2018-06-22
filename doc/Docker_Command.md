@@ -1,8 +1,6 @@
-Docker file
+# Docker file
 Dockerfile đơn giản là một file (dạng text nhưng không có Extension) chứa một tập hợp các dòng lệnh dùng để khởi tạo một docker image. 
-Nó quy định image sẽ được khởi tạo như thế nào , gồm các ứng dụng gì trong đó.
-
-Trong Dockerfile có các câu lệnh chính sau:
+Nó quy định image sẽ được khởi tạo như thế nào , gồm các ứng dụng gì trong đó.Trong Dockerfile có các câu lệnh chính sau <br>
 FROM: xây dựng image trên các image có sẵn
 ```
 FROM ubuntu14.04:lastest
@@ -31,9 +29,7 @@ Lưu ý là cái này chỉ để khai báo, chứ ko có chức năng nat port 
 Muốn nat port, thì phải sử dụng cờ -p (nat một vài port) hoặc -P (nat tất cả các port được khai báo trong EXPOSE) 
 trong quá trình khởi tạo contrainer.
 ```
-EXPOSE 80:8080
+EXPOSE 80
 ```
 ADD:Chỉ thị ADD copy file, thư mục, remote files URL (src) và thêm chúng vào filesystem của image (dest)
-```
 
-```
