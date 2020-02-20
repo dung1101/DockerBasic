@@ -5,14 +5,13 @@
 - Giao diện dòng lệnh CLI ( docker command line ) CLI sử dụng API của Docker REST để điều khiển hoặc tương tác với 
 daemon Docker thông qua kịch bản hoặc các lệnh CLI trực tiếp. Nhiều ứng dụng Docker khác sử dụng API cơ bản và CLI.
 ## 1.Cài đặt  
-- Đăng nhập với quyên root và thực hiện lệnh dưới để cài đặt. Đảm bảo máy có kết nối internet.
 ```
-su - 
-curl -sSL https://get.docker.com/ | sudo sh
-```
-- Phân quyền cho user1 
-```
-sudo usermod -aG docker `user1`
+sudo apt-get update
+sudo apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 ## 2.Sử dụng
 ### 2.1.Thực hành với image
